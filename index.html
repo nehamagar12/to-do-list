@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="follower">
+
+    </div>
     <div class="parent">
       <h1>To Do List</h1>
       <input id="iteminput" type="text" placeholder="Enter your task"  />
@@ -44,6 +47,12 @@
 
         }
       }
+      let follower = document.querySelector(".follower")
+        document.addEventListener("mousemove",(e)=>{
+            console.log(e)
+            let {clientX, clientY}=e; 
+            follower.style.transform=`translate(${clientX}px, ${clientY}px)`;
+        });
     </script>
   </body>
 </html>
